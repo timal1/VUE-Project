@@ -4,12 +4,12 @@
             <div class="box_content">
                 <div class="header__nav">
                     <div class="logo__left">
-                        <a class="logo" href="#"><img src="@/assets/img/Logo1.svg" alt="logo"> Interno</a>
+                        <a class="logo" href="#"><img src="@/assets/img/Logo1.svg" alt=""> Interno</a>
                     </div>
                     <div>
-                        <a class="logo__right" href="#">Home</a>
-                        <a class="logo__right" href="#">Project</a>
-                        <a class="logo__right" href="#">Blog</a>
+                        <a class="logo__right" href="">Home</a>
+                        <a class="logo__right" href="">Project</a>
+                        <a class="logo__right" href="">Blog</a>
                     </div>
                 </div>
             </div>

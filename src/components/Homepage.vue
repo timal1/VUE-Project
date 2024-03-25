@@ -7,7 +7,7 @@
                     <h1 class="section__title">Be Unique</h1>
                     <p class="section__text">There are many variations of the passages of
                         lorem Ipsum fromavailable, majority.</p>
-                    <button class="section__btn">Get Started <img src="@/assets/img/arrow.svg" alt="image"></button>
+                    <button class="section__btn">Get Started <img src="@/assets/img/arrow.svg" alt=""></button>
                 </div>
             </div>
             <div class="subtitle">
@@ -81,16 +81,57 @@
                 <div class="verticalLine"></div>
                 <div class="asideCard">
                     <div class="asideValue">95</div>
-                    <div class="asideTitle">Happy CUstomers</div>
+                    <div class="asideTitle">Happy Customers</div>
                 </div>
             </div>
 
         </div>
     </div>
+    <div class="articlesNews">
+        <div class="container">
+            <div class="articlesNews__content">
+                <div class="articlesNews__section">
+                    <h1 class="articlesNews__content__title">Articles & News</h1>
+                    <p class="articlesNews__content__text">It is a long established fact that a reader will be
+                        distracted by the of readable content of a page when lookings at its layouts the points of
+                        using.</p>
+                </div>
+                <div class="articlesNews__cards">
+                    <LittleCard :text=textLittleCard1 :date=dateLittleCard1 :image=imageLittleCard1 :tagImage= tagImageLittleCard1 />
+                    <LittleCard :text=textLittleCard2 :date=dateLittleCard2 :image=imageLittleCard2 :tagImage= tagImageLittleCard2 />
+                    <LittleCard :text=textLittleCard3 :date=dateLittleCard3 :image=imageLittleCard3 :tagImage= tagImageLittleCard3 />
+                </div>
+            </div>
+        </div>
+    </div>
 
 </template>
 
-<script setup lang="ts">
+<script>
+import LittleCard from './LittleCard.vue';
+
+export default {
+    name: 'Homepage',
+    components: {
+        LittleCard,
+    },
+    data () {
+      return {
+        textLittleCard1: "Let’s Get Solution For Building Construction Work",
+        textLittleCard2: "Low Cost Latest Invented Interior Designing Ideas.",
+        textLittleCard3: "Best For Any Office & Business Interior Solution",
+        dateLittleCard1: "26 December,2022",
+        dateLittleCard2: "22 December,2022",
+        dateLittleCard3: "25 December,2022",
+          imageLittleCard1: "url(/img/littleCard1.deeec166.jpg)",
+          imageLittleCard2: "url(/img/littleCard2.6aa38599.jpg)",
+          imageLittleCard3: "url(/img/littleCard3.157ec226.jpg)",
+        tagImageLittleCard1: "Kitchan Design",
+        tagImageLittleCard2: "Living Design",
+        tagImageLittleCard3: "Interior Design"
+      }
+    }
+}
 
 </script>
 
@@ -297,6 +338,48 @@
     letter-spacing: 0.01em;
     text-align: left;
     color: #4D5053;
-    ;
+}
+
+.articlesNews__content__title {
+    font-family: DM Serif Display;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 63px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.articlesNews__content__text {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.articlesNews__section {
+    max-width: 812px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 52px;
+}
+
+.articlesNews__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.articlesNews {
+    margin-bottom: 96px;
+}
+
+.articlesNews__cards {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-between;
 }
 </style>

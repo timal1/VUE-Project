@@ -3,11 +3,11 @@
         <div class="container">
             <div class="box__content">
                 <div class="logo__info">
-                    <a class="logo" href="#"><img src="@/assets/img/Logo1.svg" alt="logo"> Interno</a>
+                    <a class="logo" href="#"><img src="@/assets/img/Logo1.svg" alt=""> Interno</a>
                     <p class="logo__text">It is a long established fact that a reader will be distracted lookings.</p>
                     <div class="logo__icons">
-                        <a class="icon" href="#"><img src="@/assets/img/twit.svg" alt="icon"></a>
-                        <a class="icon" href="#"><img src="@/assets/img/in.svg" alt="icon"></a>
+                        <a class="icon" href="#"><img src="@/assets/img/twit.svg" alt=""></a>
+                        <a class="icon" href="#"><img src="@/assets/img/in.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="pages">
