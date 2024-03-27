@@ -24,7 +24,8 @@
                             <h3 class="productCardTitle">Modern Kitchan</h3>
                             <p class="productCardText">Decor / Artchitecture</p>
                         </div>
-                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt="vector"></button></div>
+                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt="vector"></button>
+                        </div>
                     </div>
 
                 </div>
@@ -34,7 +35,8 @@
                             <h3 class="productCardTitle">Modern Kitchan</h3>
                             <p class="productCardText">Decor / Artchitecture</p>
                         </div>
-                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt="vector"></button></div>
+                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt="vector"></button>
+                        </div>
                     </div>
 
                 </div>
@@ -44,7 +46,8 @@
                             <h3 class="productCardTitle">Modern Kitchan</h3>
                             <p class="productCardText">Decor / Artchitecture</p>
                         </div>
-                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt="vector"></button></div>
+                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt="vector"></button>
+                        </div>
                     </div>
 
                 </div>
@@ -54,7 +57,8 @@
                             <h3 class="productCardTitle">Modern Kitchan</h3>
                             <p class="productCardText">Decor / Artchitecture</p>
                         </div>
-                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt="vector"></button></div>
+                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt="vector"></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,9 +101,7 @@
                         using.</p>
                 </div>
                 <div class="articlesNews__cards">
-                    <LittleCard :text=textLittleCard1 :date=dateLittleCard1 :image=imageLittleCard1 :tagImage= tagImageLittleCard1 />
-                    <LittleCard :text=textLittleCard2 :date=dateLittleCard2 :image=imageLittleCard2 :tagImage= tagImageLittleCard2 />
-                    <LittleCard :text=textLittleCard3 :date=dateLittleCard3 :image=imageLittleCard3 :tagImage= tagImageLittleCard3 />
+                    <SecondCard :button="button" :articles="articles.slice(0, 3)" />
                 </div>
             </div>
         </div>
@@ -108,29 +110,29 @@
 </template>
 
 <script>
-import LittleCard from './LittleCard.vue';
+import SecondCard from "../components/SecondCard.vue";
+import { mapState } from "vuex";
 
 export default {
     name: 'Homepage',
     components: {
-        LittleCard,
+        SecondCard,
     },
-    data () {
-      return {
-        textLittleCard1: "Let’s Get Solution For Building Construction Work",
-        textLittleCard2: "Low Cost Latest Invented Interior Designing Ideas.",
-        textLittleCard3: "Best For Any Office & Business Interior Solution",
-        dateLittleCard1: "26 December,2022",
-        dateLittleCard2: "22 December,2022",
-        dateLittleCard3: "25 December,2022",
-          imageLittleCard1: "url(/img/littleCard1.deeec166.jpg)",
-          imageLittleCard2: "url(/img/littleCard2.6aa38599.jpg)",
-          imageLittleCard3: "url(/img/littleCard3.157ec226.jpg)",
-        tagImageLittleCard1: "Kitchan Design",
-        tagImageLittleCard2: "Living Design",
-        tagImageLittleCard3: "Interior Design"
-      }
-    }
+    data() {
+        return {
+            button: {
+                height: 16,
+                width: 8.03,
+                class: "articles__btn",
+            },
+        };
+    },
+    computed: {
+        ...mapState({
+            articles: (state) => state.articles.slice(0, 3),
+            firstCards: (state) => state.projectCards.slice(0, 4),
+        }),
+    },
 }
 
 </script>

@@ -26,11 +26,6 @@ import ArrowBtn from "./ArrowBtn.vue";
 export default {
   props: ["button", "articles"],
   components: { ArrowBtn },
-  // data() {
-  //   return {
-
-  //   };
-  // },
 };
 </script>
 
