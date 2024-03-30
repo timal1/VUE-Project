@@ -1,4 +1,4 @@
-# app
+# hw-app
 
 ## Project setup
 ```
@@ -7,7 +7,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run server
+npm run serve
 ```
 
 ### Compiles and minifies for production
